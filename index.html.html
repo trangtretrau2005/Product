@@ -31,19 +31,30 @@
         .product-list {
             list-style-type: none;
             padding: 0;
+            display: flex; /* Sử dụng flexbox */
+            flex-wrap: wrap; /* Cho phép các sản phẩm xuống dòng khi không đủ không gian */
+            justify-content: space-between; /* Canh chỉnh các sản phẩm theo chiều ngang */
         }
-        .product-list li {
+        .product-item {
             background-color: #fff;
             border: 1px solid #ccc;
             margin-bottom: 10px;
             padding: 10px;
+            width: 30%; /* Đặt chiều rộng của sản phẩm */
+            box-sizing: border-box; /* Tính cả padding và border vào kích thước */
         }
-        .product-list li a {
+        .product-item a {
             text-decoration: none;
             color: #333;
         }
-        .product-list li:hover {
+        .product-item:hover {
             background-color: #f9f9f9;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Để hình ảnh hiển thị dưới dạng khối */
+            margin: 0 auto; /* Canh chỉnh hình ảnh vào giữa */
         }
     </style>
 </head>
@@ -60,11 +71,24 @@
         <section>
             <h2>Our Products</h2>
             <ul class="product-list">
-                <li><a href="https://www.amazon.com/GermGuardian-Purifier-Allergies-Cleaner-Guardian/dp/B01CTN024Y?pd_rd_w=ipKBS&content-id=amzn1.sym.f5690a4d-f2bb-45d9-9d1b-736fee412437&pf_rd_p=f5690a4d-f2bb-45d9-9d1b-736fee412437&pf_rd_r=004PCRJZX47EM40M2R19&pd_rd_wg=MLBdt&pd_rd_r=baa61516-4ec0-4377-9ca1-9dc9b69e8763&pd_rd_i=B01CTN024Y&psc=1&linkCode=ll1&tag=shoptehat-20&linkId=70348ffd8dac439016ae088782978f82&language=en_US&ref_=as_li_ss_tl">Product 1 - <u><b>GermGuardian Air Purifier for Homes</u></b> </a></li>
-                <img src="https://m.media-amazon.com/images/I/31QqZp1l2YL._MCnd_AC_.jpg">
-		<!-- <li><a href="#">Product 2 - Description of Product 2</a></li>
-                <li><a href="#">Product 3 - Description of Product 3</a></li> -->
-                <!-- Add more product links as needed -->
+                <li class="product-item">
+                    <a href="https://amzn.to/49EQ9qZ">Product 1 - <u><b>GermGuardian Air Purifier for Homes</u></b></a>
+                    <img src="https://m.media-amazon.com/images/I/31QqZp1l2YL._MCnd_AC_.jpg" height="200" width="200">
+                </li>
+                <li class="product-item">
+                    <a href="https://amzn.to/3Tn3IFN">Product 2 - <u><b>Newmowa 60 LED High Power Rechargeable Clip Fill Video Conference Light</u></b></a>
+                    <img src="https://m.media-amazon.com/images/I/713x-AxAYTL._AC_SX679_.jpg" height="200" width="200">
+                </li>
+                <!-- Add more product items as needed 
+                <li class="product-item">
+                    <a href="#">Product 3 - Description of Product 3</a>
+                    <img src="path_to_image" height="200" width="200">
+                </li>
+                <li class="product-item">
+                    <a href="#">Product 4 - Description of Product 4</a>
+                    <img src="path_to_image" height="200" width="200">
+                </li> -->
+                
             </ul>
         </section>
         <section>
